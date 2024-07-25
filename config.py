@@ -13,7 +13,7 @@ class Config(object):
     UPLOADS = "./app/static/uploads"
     SESSION_COOKIE_SECURE = True
 
-class Production(Config):
+class ProductionConfig(Config):
     pass
 
 class DevelopmentConfig(Config):
@@ -23,7 +23,7 @@ class DevelopmentConfig(Config):
     UPLOADS = "/flask_test/uploads"
     SESSION_COOKIE_SECURE = False
 
-class TestingConfig(config):
+class TestingConfig(Config):
     TESTING = True
     DB_NAME = "development_db"
     DB_PASSWORD = "change_this_later"
